@@ -53,23 +53,63 @@
         </p>
 
         <h1 id="building-damage">Building Damage</h1>
-        <h2><a href="https://satelliteimagerydemostg.z5.web.core.windows.net/damage-assessment/maui_lahaina_8_8_2023.html">Microsoft AI for Good damaged buildings visualization</a></h2>
-        <img src="assets/microsoft.png">
+
+        <h2>Microsoft AI for Good Building Damage Assessment</h2>
+
+        <figure>
+            <img src="assets/microsoft-small-map.jpg" style="width:100%">
+            <img src="assets/microsoft-context-map.jpg" style="width:100%">
+            <figcaption>Credit: Microsoft.</figcaption>
+        </figure>
+
         <p>
-        The <a href="https://www.microsoft.com/en-us/research/project/geospatial-machine-learning/">Microsoft AI for Good geospatial team</a> used machine learning and very high resolution satellite imagery from Planet Inc's SkySat satellite constellation to identify damaged buildings in Lahaina following the wildfires. You can use their viewer tool to explore before and after satellite images of Lahaina and see the detections of building damage levels.
+        The <a href="https://www.microsoft.com/en-us/research/project/geospatial-machine-learning/">Microsoft AI for Good geospatial team</a> used machine learning and very high resolution satellite imagery from Planet Inc's SkySat satellite constellation to identify damaged buildings in Lahaina following the wildfires.
         </p>
 
         <br>
 
         <h1 id="wildfire-monitoring">Wildfire Monitoring</h1>
-
-        <p>Coming soon</p>
+        <h2><a href="https://firms.modaps.eosdis.nasa.gov/map/#t:adv;d:2023-08-06..2023-08-12;@-156.5,20.8,10z">NASA Fire Information for Resource Management System (FIRMS)</a></h2>
+        <img src="assets/nasa_firms.png">
+        <p>
+        The NASA Fire Information for Resource Management System (FIRMS) combines data from multiple satellites to detect active wildfires, primarily by looking for the strong heat signature of fires. Their visualization dashboard shows locations where active fires were detected in the most recent satellite observations.
+        </p>
 
         <br>
 
         <h1 id="imagery">Satellite Imagery</h1>
 
-        <p>Coming soon</p>
+        <h2>Lāhainā Fire</h2>
+
+        <figure>
+          <img src="assets/nyt-1.jpg" alt="Before/after Lahaina" style="width:100%">
+          <img src="assets/nyt-2.jpg" alt="Before/after Lahaina" style="width:100%">
+          <figcaption>Images from Planet Inc's satellite constellation of damage from Lāhainā wildfire shared by the <a href="https://www.nytimes.com/interactive/2023/08/10/us/maui-wildfire-map-hawaii.html?name=styln-hawaii-wildfires&region=TOP_BANNER&block=storyline_menu_recirc&action=click&pgtype=LegacyCollection&variant=undefined">New York Times</a>. Image credit: Planet Labs, New York Times.</figcaption>
+        </figure>
+        <br>
+
+        <h2>Kula/Upcountry Fire</h2>
+
+        <figure>
+            <img src="assets/kula-fire.gif" style="width:100%">
+            <figcaption>Satellite images from August 7, August 8, and August 9 show the progression of the Kula wildfire. Image credit: Hannah Kerner, Planet Labs, European Space Agency.</figcaption>
+        </figure>
+
+        <h2>How to access satellite data</h2>
+
+        <p>Satellites launched by space agencies are freely available (and can be explored below), but are at a lower resolution. Most satellite datasets collected by NASA and European Space Agency satellites are available publicly on the same day the satellite observations are taken.</p>
+
+        <p>The high-resolution satellites from Planet, Inc. used to generate some of the products above is not generally freely available, so we do not provide instructions on accessing those data products here.</p>
+
+
+        <h3><a href="https://apps.sentinel-hub.com/sentinel-playground/?source=S2L2A&lat=20.78412323263854&lng=-156.45424890797585&zoom=11&preset=1_TRUE_COLOR&layers=B01,B02,B03&maxcc=20&gain=1.0&gamma=1.0&time=2023-02-01%7C2023-08-08&atmFilter=&showDates=false">Sentinel-2 SentinelHub Playground</a></h3>
+
+        <img src="assets/sentinelhub.png">
+
+        <p>The SentinelHub Playground makes data from the <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2">Sentinel-2</a> satellites available to explore in your web browser. The date of the imagery can be controlled in the calendar icon on the webpage header (highlighted by a red box in the image above). Sentinel-2 images are captured at least every 5 days, at approximately 10:00am local time. The last Sentinel-2 images over Maui were taken on August 8, so the next image should be availalbe on August 13.</p>
+
+        <h3><a href="https://firms.modaps.eosdis.nasa.gov/usfs/active_fire/">NASA Active Fire Data</a></h3>
+        <p>This website provides the raw geospatial data of active fire detections from the NASA MODIS, VIIRS, and Landsat satellites to generate the map on the NASA Fire Information for Resource Management System linked above. You can access the data by downloading the files or using their API. </p>
 
     </div>
   </body>
