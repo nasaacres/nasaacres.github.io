@@ -96,9 +96,42 @@
 
         <h1 id="imagery">Satellite Imagery</h1>
 
-        <h2><a href="https://storms.ngs.noaa.gov/storms/2023_hawaii/index.html#11.34/20.8418/-156.4725">NOAA Emergency Response Imagery Viewer</a></h2>
+        <h2>Satellite Moisture Index</h2>
+
+        <p>The Sentinel-2 satellite operated by the European Space Agency (ESA) takes images everywhere on Earth every 5 days using a multispectral camera (meaning it has visible color - red/green/blue - but also measures wavelengths like near-infrared and shortwave-infrared that we can't see with our eyes but are sensitive to properties of the surface like moisture content and molecular composition. The Sentinel-2 satellite images are freely available to the public (like most ESA and NASA satellite datasets). </p>
+
+        <p>The images below show before and after in true color from Sentinel-2 taken before the fire on August 3 and after the fire on August 13. In the August 13 image, you can see the burned areas ("burn scars") in Lahaina and Upcountry/South Maui.</p>
         <figure>
-          <img src="assets/noaa-kula.jpg" alt="Maxar image of Kula fire" style="width:100%">
+          <img src="assets/before-aug3.jpg" alt="Sentinel-2 image of Maui before fire" style="width:100%">
+          <img src="assets/after-aug13.jpg" alt="Sentinel-2 image of Maui after fire" style="width:100%">
+          <figcaption>Sentinel-2 true color images of Maui before and after wildfires.</figcaption>
+        </figure>
+
+        <p>Fire risk mapping using satellite data is an active area of research. For example, <a href="https://sentinels.copernicus.eu/web/success-stories/-/copernicus-sentinel-2-supports-sardinia-in-the-management-of-forest-fires">this article</a> describes how ESA used the Sentinel-2 satellite for fire risk mapping of Sardinia. In that article, they compute a "daily fire hazard index" from the satellite observations, which is a combination of several variables computed from the data including an index called Global Vegetation Moisture Index (GVMI), described in <a href="https://doi.org/10.3390/rs12152356">this paper</a>. GVMI is just a normalized difference of the near-infrared and shortwave infrared channels of the multispectral satellite image. Values range from -1 to 1 and -1 indicates the driest surfaces and 1 indicates the moistest surfaces. (Note it's also sometimes called the Normalized Difference Moisture Index or NDMI, because not everything in the image is vegetation so the term GVMI can be confusing since not everything in the image is vegetation.)</p>
+
+        <p>The next image shows the same area as the true color images above, but in false color of GVMI. The colormap is stretched so the values range from -0.2 (driest) to 0.2 (moistest). Dark red = driest areas and dark green = moistest areas. The below image shows GVMI on August 3, 2023 (a few days before the fires). The large parallelograms overlaid in the second image show pixels from the MODIS satellite in which fires were detected (one of the datasets used in the FIRMS Dashboard, described later on this webpage).</p>
+
+        <figure>
+          <img src="assets/moisture-maui-inset.jpg" alt="False color GVMI image of Maui before fire" style="width:100%">
+          <img src="assets/fires-and-moisture.jpg" alt="False color GVMI image overlaid with MODIS fire detections" style="width:100%">
+          <figcaption>
+              False color image showing global vegetation moisture index (GVMI) computed from Sentinel-2 images of Maui on August 3, 2023. GVMI is a combination of near-infrared (NIR) and shortwave infrared (SWIR) bands from the multispectral satellite observation. Bottom image overlays MODIS pixel locations where fires were detected.
+          </figcaption>
+        </figure>
+
+        <p>Note that this GVMI map can be visualized for any of the Sentinel-2 observations (every 5 days). In the future, this is one of the variables that can be monitored from satellite data to see which areas are driest and most at risk of wildfires (ideally combining it with other datasets too like in the article example in Sardinia).</p>
+
+        <p>The next image shows a GVMI map of all of Maui County on August 3. It can be seen that in addition to the extremely dry areas on Maui, there are extremely dry areas on western Molokai and on Lanai.</p>
+
+        <figure>
+            <img src="assets/moisture-maui.jpg" alt="False color GVMI image of Maui Nui August 3" style="width:100%">
+            <figcaption>False color GVMI image of Maui County on August 3, 2023.</figcaption>
+        </figure>
+
+        <h2><a href="https://storms.ngs.noaa.gov/storms/2023_hawaii/index.html#11.34/20.8418/-156.4725">NOAA Emergency Response Imagery Viewer</a></h2>
+
+        <figure>
+            <img src="assets/noaa-kula.jpg" alt="Maxar image of Kula fire" style="width:100%">
           <img src="assets/noaa-lahaina.jpg" alt="Maxar image of Lahaina fire" style="width:100%">
           <figcaption>Images from Maxar satellites of damage from Kula/Upcountry/South Maui and Lāhainā wildfires shared in NOAA Emergency Response Imagery Viewer. Image credit: Maxar, NOAA.</figcaption>
         </figure>
@@ -132,9 +165,10 @@
 
         <h2>How to access satellite data</h2>
 
-        <p>Satellites launched by space agencies are freely available (and can be explored below), but are at a lower resolution. Most satellite datasets collected by NASA and European Space Agency satellites are available publicly on the same day the satellite observations are taken.</p>
+        <p>Satellites launched by space agencies are freely available (and can be explored below), but are at a lower resolution. Most satellite datasets collected by NASA and European Space Agency satellites are available publicly on the same day the satellite observations are taken. The high-resolution satellites from private companies like Planet, Maxar, and others are typically not freely available. However, many companies have disaster response programs that give free access to high-resolution imagery following disasters.</p>
 
-        <p>The high-resolution satellites from Planet, Inc. used to generate some of the products above is not generally freely available, so we do not provide instructions on accessing those data products here.</p>
+        <h3><a href="https://www.planet.com/disasterdata/">Planet Disaster Data Program</a></h3>
+        <p>Planet makes their high-resolution imagery available to the public following select disaster events, including the Maui wildfires.</p>
 
         <h3><a href="https://www.maxar.com/open-data/maui-hawaii-fires">Maxar Open Data Program</a></h3>
         <p>
