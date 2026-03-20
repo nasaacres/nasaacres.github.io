@@ -35,9 +35,9 @@
         <h1>Satellite Data to Support Kona Low Response</h1>
         <!-- <a href="#dashboards">Community Maps and Dashboards</a> -->
         <!-- &nbsp;|&nbsp; -->
-        <a href="#storms-ground">Storms from the Ground</a>
+        <a href="#storms-ground">📍 Storms from the Ground</a>
         &nbsp;|&nbsp;
-        <a href="#flood-extent">March 13-14 Flood Extent</a>
+        <a href="#storms-space">🛰️ Storms from Space</a>
         <!-- &nbsp;|&nbsp; -->
         <!-- <a href="#imagery">Imagery</a> -->
         <!-- &nbsp;|&nbsp; -->
@@ -64,7 +64,7 @@
 
         <p>This ArcGIS-based Searchable Visualization Dashboard was created by Christine, a GIS expert and spatial ecologist in Kula. You can use this searchable map to explore the post-fire data, using the slider to see before and after imagery. You can also turn on and off layers (including visually assessed damage, fire perimeter, Hawaiian homelands, historic places, mile markers, and fires/thermal hotspots).</p> -->
 
-        <h1 id="storms-ground">Storms from the Ground: In Situ Data</h1>
+        <h1 id="storms-ground">📍 Storms from the Ground: In Situ Data</h1>
 
         <h2> Kona Low I March 10-16, 2026</h2>
 
@@ -115,9 +115,88 @@
 
         <br> -->
 
-        <h1 id="flood-extent">March 13-14 Flood Extent</h1>
+        <h1 id="storms-space"> 🛰️ Storms from Space: Satellite Data</h1>
 
-        <!-- <h2>Satellite Moisture Index</h2>
+        <h2> Kona Low I March 10-16, 2026</h2>
+
+        <h3><b>🌧️ Rainfall 🌧️</b></h3>
+        <figure style="max-width:1000px; margin:0;">
+            <div style="display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap;">
+
+                <!-- GIF -->
+                <img 
+                src="assets/kona_low_2026/gpm_rainfall_rate.gif" 
+                style="flex:1; min-width:300px; max-width:750px; width:100%; border-radius:10px;"
+                >
+
+                <!-- Legend -->
+                <div style="background:#fafafa; border:1px solid #ddd; border-radius:10px; padding:12px 14px; min-width:90px;">
+                    <div style="font-weight:bold; font-size:13px; margin-bottom:10px;">Rate (in/hr)</div>
+
+                    <div style="display:flex; align-items:center; margin-bottom:6px;">
+                        <span style="display:inline-block; width:16px; height:16px; background:#000096; border:1px solid #ccc; margin-right:6px;"></span>
+                        <span style="font-size:12px;">0.00</span>
+                    </div>
+
+                    <div style="display:flex; align-items:center; margin-bottom:6px;">
+                        <span style="display:inline-block; width:16px; height:16px; background:#0064ff; border:1px solid #ccc; margin-right:6px;"></span>
+                        <span style="font-size:12px;">0.14</span>
+                    </div>
+
+                    <div style="display:flex; align-items:center; margin-bottom:6px;">
+                        <span style="display:inline-block; width:16px; height:16px; background:#00b4ff; border:1px solid #ccc; margin-right:6px;"></span>
+                        <span style="font-size:12px;">0.29</span>
+                    </div>
+
+                    <div style="display:flex; align-items:center; margin-bottom:6px;">
+                        <span style="display:inline-block; width:16px; height:16px; background:#33db80; border:1px solid #ccc; margin-right:6px;"></span>
+                        <span style="font-size:12px;">0.43</span>
+                    </div>
+
+                    <div style="display:flex; align-items:center; margin-bottom:6px;">
+                        <span style="display:inline-block; width:16px; height:16px; background:#9beb4a; border:1px solid #ccc; margin-right:6px;"></span>
+                        <span style="font-size:12px;">0.57</span>
+                    </div>
+
+                    <div style="display:flex; align-items:center; margin-bottom:6px;">
+                        <span style="display:inline-block; width:16px; height:16px; background:#ffb300; border:1px solid #ccc; margin-right:6px;"></span>
+                        <span style="font-size:12px;">0.71</span>
+                    </div>
+
+                    <div style="display:flex; align-items:center;">
+                        <span style="display:inline-block; width:16px; height:16px; background:#af0000; border:1px solid #ccc; margin-right:6px;"></span>
+                        <span style="font-size:12px;">1.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caption -->
+            <figcaption style="margin-top:10px; font-size:14px; color:#444;">
+                Gif animation of <b>rainfall rate</b> in inches/hour (in/hr) from 03/09 14:00 → 03/15 13:30 (HNL) using GPM IMERG.
+            </figcaption>
+            </figure>
+         <p>   
+        ℹ️ Use the animation to track rainfall intensity over time; red areas indicate the highest rates (over 1 in/hr).
+         </p>
+
+        <iframe src="https://ee-anatarano.projects.earthengine.app/view/maui-nui-kona-storm-march-2026" style="width:100%; height:500px"></iframe>
+        Credit: Arizona State University/NASA Acres Team using NASA GPM IMERG data.</a>
+        
+        <p>
+       ℹ️ This <a href ="https://ee-anatarano.projects.earthengine.app/view/maui-nui-kona-storm-march-2026">interactive map</a> allows you to see the estimated total rainfall in inches (in) from the first Kona Low Storm using GPM IMERG data. 📈Click anywhere on the map to see a local time series of rainfall rate (in/hr) and total accumulated rainfall (in) from March 9th through March 15th.
+        </p>
+
+        <p>   
+        ⚠️ Note that this data has not been bias-corrected yet and represent larger areas than the ground-based measurements so the total precipitation during intense rainfall may be underestimated.
+         </p>
+
+         <figure>
+            <img src="assets//kona_low_2026/upcountry_rain.png" style="width:100%">
+            <figcaption>Example graphs from  <a href ="https://ee-anatarano.projects.earthengine.app/view/maui-nui-kona-storm-march-2026">satellite-based interactive map</a> of the Upcountry area: (top) cumulative rainfall (in); (bottom) rainfall rate (in/hr).</figcaption>
+        </figure>
+
+
+        <!-- <h2>March 13-14 Flood Extent</h2>
 
         <p>The Sentinel-2 satellite operated by the European Space Agency (ESA) takes images everywhere on Earth every 5 days using a multispectral camera (meaning it has visible color - red/green/blue - but also measures wavelengths like near-infrared and shortwave-infrared that we can't see with our eyes but are sensitive to properties of the surface like moisture content and molecular composition. The Sentinel-2 satellite images are freely available to the public (like most ESA and NASA satellite datasets). </p>
 
