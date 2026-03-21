@@ -7,7 +7,18 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css">
     <link rel="icon" href="assets/acres-logo-color-small.png">
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="main.css">
-  </head>
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+            }, 0);
+        });
+        </script>
+</head>
 
   <body>
     <!-- Header -->
@@ -74,8 +85,12 @@
 
         <h3><b>🏞️ Stream Gauges and Hydrology 🏞️</b></h3>
 
-        <iframe src="https://water.noaa.gov/wfo/hfo#@=-157.2643184,20.1073586,6.4851091&b=topographic&g=obsFcst,1!1!1!1!1!1!1!1!1!1!1!1!1!1!1!0!0!0!0!0,0.5,1!1!1!1!0,0,0,true&ab=0,0,#D94B4A,1,1,1,#cccccc,1,0,0,#B243B1,1,0,0,#98E09A,1,false&a=hydrologic,0.35,false&s=0,0,0.9,0.9,false&n=false,#72afe9,0.9,0,0.9,0,0.9,false&p=false,0.75,0,7,0,1,2026,3,21,0,false&d=0,0,1,1,1,1,1,1,#006EFF,1,#006EFF,1,#006EFF,false&q=wfo%3AHFO" style="width:100%; height:650px"></iframe>
-        Credit: <a href="https://water.noaa.gov/#@=-157.3437769,20.6203721,6.9857629&b=topographic&g=obsFcst,1!1!1!1!1!1!1!1!1!1!1!1!1!1!1!0!0!0!0!0,0.5,1!1!1!1!0,0,0,true&ab=0,0,#D94B4A,1,1,1,#cccccc,1,0,0,#B243B1,1,0,0,#98E09A,1,false&a=hydrologic,0.35,false&s=0,0,0.9,0.9,false&n=false,#72afe9,0.9,0,0.9,0,0.9,false&p=false,0.75,0,7,0,1,2026,3,21,0,false&d=0,0,1,1,1,1,1,1,#006EFF,1,#006EFF,1,#006EFF,false&q=">National Water Service/NOAA.</a>
+        <iframe src="https://dashboard.waterdata.usgs.gov/app/nwd/en/?aoi=bbox-%5B-160.66406%2C17.97873%2C-152.92969%2C22.59373%5D" style="width:100%; height:650px"></iframe>
+        Credit: <a href="https://dashboard.waterdata.usgs.gov/app/nwd/en/?aoi=bbox-%5B-160.66406%2C17.97873%2C-152.92969%2C22.59373%5D">USGS National Water Dashboard.</a>
+
+
+        <!-- <iframe src="https://water.noaa.gov/wfo/hfo#@=-157.2643184,20.1073586,6.4851091&b=topographic&g=obsFcst,1!1!1!1!1!1!1!1!1!1!1!1!1!1!1!0!0!0!0!0,0.5,1!1!1!1!0,0,0,true&ab=0,0,#D94B4A,1,1,1,#cccccc,1,0,0,#B243B1,1,0,0,#98E09A,1,false&a=hydrologic,0.35,false&s=0,0,0.9,0.9,false&n=false,#72afe9,0.9,0,0.9,0,0.9,false&p=false,0.75,0,7,0,1,2026,3,21,0,false&d=0,0,1,1,1,1,1,1,#006EFF,1,#006EFF,1,#006EFF,false&q=wfo%3AHFO" style="width:100%; height:650px"></iframe> -->
+        <!-- Credit: <a href="https://water.noaa.gov/#@=-157.3437769,20.6203721,6.9857629&b=topographic&g=obsFcst,1!1!1!1!1!1!1!1!1!1!1!1!1!1!1!0!0!0!0!0,0.5,1!1!1!1!0,0,0,true&ab=0,0,#D94B4A,1,1,1,#cccccc,1,0,0,#B243B1,1,0,0,#98E09A,1,false&a=hydrologic,0.35,false&s=0,0,0.9,0.9,false&n=false,#72afe9,0.9,0,0.9,0,0.9,false&p=false,0.75,0,7,0,1,2026,3,21,0,false&d=0,0,1,1,1,1,1,1,#006EFF,1,#006EFF,1,#006EFF,false&q=">National Water Service/NOAA.</a> -->
 
         <br> <br>Other gauged data available at <a href="https://waterdata.usgs.gov/state/hawaii/">USGS.</a>
 
