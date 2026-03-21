@@ -35,7 +35,7 @@
         <h1>Satellite Data to Support Kona Low Response</h1>
                 <div style="margin:16px 0 20px; padding:14px 16px; border-left:5px solid #1f6f8b; background:#eef7fb; border-radius:6px;">
                     <p style="margin:0 0 8px;"><strong>📧 Contact:</strong> If you have questions or think we can help with your data needs, contact Ana Tárano at <a href="mailto:atarano@asu.edu">atarano@asu.edu</a> or Hannah Kerner at <a href="mailto:hkerner@asu.edu">hkerner@asu.edu</a>.</p>
-                    <p style="margin:0;"><strong>🗓️ Last updated:</strong> This page was last updated on March 21, 2026 4:40AM (HNL).</p>
+                    <p style="margin:0;"><strong>🗓️ Last updated:</strong> This page was last updated on March 21, 2026 5:32AM (HNL).</p>
                 </div>
         <!-- <a href="#dashboards">Community Maps and Dashboards</a> -->
         <!-- &nbsp;|&nbsp; -->
@@ -44,10 +44,10 @@
         <a href="#storms-space">🛰️ Storms from Space</a>
         &nbsp;|&nbsp;
         <a href="#flood-hazard">⚠️ Flood Hazard Assessment</a>
-        <!-- &nbsp;|&nbsp; -->
+        &nbsp;|&nbsp;
         <!-- <a href="https://www.civilbeat.org/2023/08/help-maui-fire-victims-heres-how-you-can-donate/"> -->
             <!-- How to Help -->
-        </a>
+        <!-- </a> -->
         <br>
         <p>
         Satellite and other geospatial data also allow us to better understand the evolution and impact of the Kona Low in March 2026 on Maui County and Hawaii. There is an abundance of information online about the storm including satellite data, but it can be hard to sort through everything. On this page, we organize the sources of satellite data related to the Kona Low storms and share resources for accessing this satellite data and derived products.
@@ -72,9 +72,19 @@
 
         <h2>Current Conditions</h2>
 
-        <h3>🪣💧 Gauged Reservoirs 🪣💧</h3>
+        <h3><b>🏞️ Stream Gauges and Hydrology 🏞️</b></h3>
+
+        <iframe src="https://water.noaa.gov/wfo/hfo#@=-157.2643184,20.1073586,6.4851091&b=topographic&g=obsFcst,1!1!1!1!1!1!1!1!1!1!1!1!1!1!1!0!0!0!0!0,0.5,1!1!1!1!0,0,0,true&ab=0,0,#D94B4A,1,1,1,#cccccc,1,0,0,#B243B1,1,0,0,#98E09A,1,false&a=hydrologic,0.35,false&s=0,0,0.9,0.9,false&n=false,#72afe9,0.9,0,0.9,0,0.9,false&p=false,0.75,0,7,0,1,2026,3,21,0,false&d=0,0,1,1,1,1,1,1,#006EFF,1,#006EFF,1,#006EFF,false&q=wfo%3AHFO" style="width:100%; height:650px"></iframe>
+        Credit: <a href="https://water.noaa.gov/#@=-157.3437769,20.6203721,6.9857629&b=topographic&g=obsFcst,1!1!1!1!1!1!1!1!1!1!1!1!1!1!1!0!0!0!0!0,0.5,1!1!1!1!0,0,0,true&ab=0,0,#D94B4A,1,1,1,#cccccc,1,0,0,#B243B1,1,0,0,#98E09A,1,false&a=hydrologic,0.35,false&s=0,0,0.9,0.9,false&n=false,#72afe9,0.9,0,0.9,0,0.9,false&p=false,0.75,0,7,0,1,2026,3,21,0,false&d=0,0,1,1,1,1,1,1,#006EFF,1,#006EFF,1,#006EFF,false&q=">National Water Service/NOAA.</a>
+
+        <br> <br>Other gauged data available at <a href="https://waterdata.usgs.gov/state/hawaii/">USGS.</a>
+
+        <br> <br>
+        
+         <h3><b>🪣💧 Gauged Reservoirs 🪣💧</b></h3>
         <iframe src="https://uhslc.soest.hawaii.edu/reservoir-new" style="width:100%; height:650px"></iframe>
         Credit: <a href="https://uhslc.soest.hawaii.edu/eservoir-new">University of Hawaii Sea Level Center.</a>
+
 
 
         <h2>Kona Low I March 10-16, 2026</h2>
@@ -196,7 +206,6 @@
 
         <iframe src="https://ee-anatarano.projects.earthengine.app/view/kona-low-1-flood-2026" style="width:100%; height:650px"></iframe>
         Credit: Arizona State University/NASA Acres Team using NASA SERVIR HYDRAFloods and ESA Sentinel-1 data, filtering streams from <a href="https://geoportal.hawaii.gov/datasets/HiStateGIS::nhd-waterbodies/about">Hawaii Statewide GIS program.</a>
-        
 
         <p>
         ℹ️ This <a href ="https://ee-anatarano.projects.earthengine.app/view/kona-low-1-flood-2026">interactive map</a> shows the estimated <b>flood extent</b> across Maui Nui from March 13-14 based on NASA SERVIR HYDRAFloods modeling tools. Areas shown in red indicate locations where flooding was detected after filtering out 
@@ -214,7 +223,7 @@
 
         🔍 To explore the map, zoom in and ↖️ click on a stream gauge. A panel will appear showing streamflow conditions and additional information for that area. Use the legend to toggle visibility of flood extent and streamflow categories.
 
-        <h1>⚠️ Flood Hazard Assessment Tool ⚠️</h1>
+        <h1 id="flood-hazard">⚠️ Flood Hazard Assessment Tool ⚠️</h1>
 
          <iframe src="https://fhat.hawaii.gov/" style="width:100%; height:650px"></iframe>
         Credit: Department of Land and Natural Resources
