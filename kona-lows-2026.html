@@ -7,17 +7,6 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css">
     <link rel="icon" href="assets/acres-logo-color-small.png">
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="main.css">
-    <script>
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
-        }
-
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-            }, 0);
-        });
-        </script>
 </head>
 
   <body>
@@ -55,7 +44,7 @@
         <a href="#storms-space">🛰️ Storms from Space</a>
         &nbsp;|&nbsp;
         <a href="#flood-hazard">⚠️ Flood Hazard Assessment</a>
-        &nbsp;|&nbsp;
+        <!-- &nbsp;|&nbsp; -->
         <!-- <a href="https://www.civilbeat.org/2023/08/help-maui-fire-victims-heres-how-you-can-donate/"> -->
             <!-- How to Help -->
         <!-- </a> -->
@@ -97,7 +86,7 @@
         <br> <br>
         
          <h3><b>🪣💧 Gauged Reservoirs 🪣💧</b></h3>
-        <iframe src="https://uhslc.soest.hawaii.edu/reservoir-new" style="width:100%; height:650px"></iframe>
+        <iframe src="https://uhslc.soest.hawaii.edu/reservoir-new" style="width:100%; height:570px"></iframe>
         Credit: <a href="https://uhslc.soest.hawaii.edu/eservoir-new">University of Hawaii Sea Level Center.</a>
 
 
@@ -240,7 +229,12 @@
 
         <h1 id="flood-hazard">⚠️ Flood Hazard Assessment Tool ⚠️</h1>
 
-         <iframe src="https://fhat.hawaii.gov/" style="width:100%; height:650px"></iframe>
+        <iframe 
+            loading="lazy"
+            tabindex="-1"
+            src="https://fhat.hawaii.gov/" 
+            style="width:100%; height:700px">
+        </iframe>
         Credit: Department of Land and Natural Resources
         
         <p>
