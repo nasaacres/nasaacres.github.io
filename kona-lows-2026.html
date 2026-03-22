@@ -53,6 +53,26 @@
         Satellite and other geospatial data also allow us to better understand the evolution and impact of the Kona Low in March 2026 on Maui County and Hawaii. There is an abundance of information online about the storm including satellite data, but it can be hard to sort through everything. On this page, we organize the sources of satellite data related to the Kona Low storms and share resources for accessing this satellite data and derived products.
         </p>
 
+        <!-- Table of Contents -->
+        <details style="margin:18px 0 24px; padding:12px 16px; background:#f7f9fb; border:1px solid #d9e2ec; border-radius:8px;" open>
+            <summary style="font-weight:bold; font-size:18px; color:#03264F; cursor:pointer;">Contents</summary>
+            <div style="margin-top:12px;">
+                <div><a href="#storms-ground">📍 Storms from the Ground: In Situ Data</a></div>
+                <div style="margin-left:18px; margin-bottom:6px;"><a href="#current-conditions">📡 Current Conditions</a></div>
+                <div style="margin-left:36px;"><a href="#stream-gauges">🏞️ Stream Gauges and Hydrology</a></div>
+                <div style="margin-left:36px;"><a href="#reservoirs">🪣💧 Gauged Reservoirs</a></div>
+                <div style="margin-left:18px; margin-bottom:6px;"><a href="#kona-low-1-ground">1️⃣ Kona Low I March 10-16, 2026</a></div>
+                <div style="margin-left:36px;"><a href="#total-rainfall-ground-1">🌧️ Total Rainfall</a></div>
+                <div style="margin-left:36px;"><a href="#wind-gusts-1">💨 Wind Gusts</a></div>
+                <div style="margin-top:8px;"><a href="#storms-space">🛰️ Storms from Space</a></div>
+                <div style="margin-left:18px; margin-bottom:6px;"><a href="#kona-low-1-space">1️⃣ Kona Low I March 10-16, 2026</a></div>
+                <div style="margin-left:36px;"><a href="#satellite-rainfall">🌧️ Rainfall</a></div>
+                <div style="margin-left:36px;"><a href="#flood-extent-1">🌊 Maui Nui: March 13-14 Flood Extent</a></div>
+                <div style="margin-top:8px;"><a href="#flood-hazard">⚠️ Flood Hazard Assessment Tool</a></div>
+            </div>
+        </details>
+
+
         <!-- <h1 id="dashboards">Community Maps and Dashboards</h1>
 
         <h2>Community Relief Map</h2>
@@ -68,11 +88,11 @@
 
         <p>This ArcGIS-based Searchable Visualization Dashboard was created by Christine, a GIS expert and spatial ecologist in Kula. You can use this searchable map to explore the post-fire data, using the slider to see before and after imagery. You can also turn on and off layers (including visually assessed damage, fire perimeter, Hawaiian homelands, historic places, mile markers, and fires/thermal hotspots).</p> -->
 
-        <h1 id="storms-ground">📍 Storms from the Ground: In Situ Data</h1>
+        <h1 id="storms-ground">📍 Storms from the Ground</h1>
 
-        <h2>Current Conditions</h2>
+        <h2 id="current-conditions">📡 Current Conditions</h2>
 
-        <h3><b>🏞️ Stream Gauges and Hydrology 🏞️</b></h3>
+        <h3 id ="stream-gauges"><b>🏞️ Stream Gauges and Hydrology 🏞️</b></h3>
 
         <iframe src="https://dashboard.waterdata.usgs.gov/app/nwd/en/?aoi=bbox-%5B-160.66406%2C17.97873%2C-152.92969%2C22.59373%5D" style="width:100%; height:650px"></iframe>
         Credit: <a href="https://dashboard.waterdata.usgs.gov/app/nwd/en/?aoi=bbox-%5B-160.66406%2C17.97873%2C-152.92969%2C22.59373%5D">USGS National Water Dashboard.</a>
@@ -85,15 +105,15 @@
 
         <br> <br>
         
-         <h3><b>🪣💧 Gauged Reservoirs 🪣💧</b></h3>
+         <h3 id="reservoirs"><b>🪣💧 Gauged Reservoirs 🪣💧</b></h3>
         <iframe src="https://uhslc.soest.hawaii.edu/reservoir-new" style="width:100%; height:570px"></iframe>
         Credit: <a href="https://uhslc.soest.hawaii.edu/eservoir-new">University of Hawaii Sea Level Center.</a>
 
 
 
-        <h2>Kona Low I March 10-16, 2026</h2>
+        <h2 id="kona-low-1-ground">1️⃣ Kona Low I March 10-16, 2026</h2>
 
-        <h3><b>🌧️ Total Rainfall 🌧️</b></h3>
+        <h3 id="total-rainfall-ground-1"><b>🌧️ Total Rainfall 🌧️</b></h3>
 
         <iframe src="https://viewer.synopticdata.com/map/data/202603161935/precipitationstorm/KLFH1/?duration=140#stationdensity=0&sort=STID,asc&map=8.2/20.8472/-156.6639" style="width:100%; height:650px"></iframe>
         Credit: <a href="https://viewer.synopticdata.com/map/data/202603161935/precipitationstorm/KLFH1/?duration=140#stationdensity=0&sort=STID,asc&map=9.37/20.7415/-156.5233">Synoptic.</a>
@@ -113,7 +133,7 @@
         🛜 In case of low connectivity, we have linked a <a href="assets//kona_low_2026/rainfall.png">screenshot</a> of the total rainfall in Maui Nui from March 10th, 2026 through March 16th. 
         </p>
 
-        <h3><b>💨 Wind Gusts on March 14th at 9AM (HNL) 💨</b></h3>
+        <h3 id="wind-gusts-1"><b>💨 Wind Gusts on March 14th at 9AM (HNL) 💨</b></h3>
 
         <iframe src="https://viewer.synopticdata.com/map/data/202603141310/wind_gust/TT926/?duration=140#stationdensity=0&sort=STID,asc&map=8.2/20.8399/-156.6434" style="width:100%; height:650px"></iframe>
         Credit: <a href="https://viewer.synopticdata.com/map/data/202603141310/wind_gust/TT926/?duration=140#stationdensity=0&sort=STID,asc&map=9.37/20.8399/-156.6434">Synoptic.</a>
@@ -124,9 +144,9 @@
 
         <h1 id="storms-space"> 🛰️ Storms from Space: Satellite Data</h1>
 
-        <h2> Kona Low I March 10-16, 2026</h2>
+        <h2 id="kona-low-1-space">1️⃣ Kona Low I March 10-16, 2026</h2>
 
-        <h3><b>🌧️ Rainfall 🌧️</b></h3>
+        <h3 id="satellite-rainfall"><b>🌧️ Rainfall 🌧️</b></h3>
         <figure style="max-width:1000px; margin:0;">
             <div style="display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap;">
 
@@ -206,7 +226,7 @@
         🛜 In case of low connectivity, we have linked a <a href="assets//kona_low_2026/gpm_total.png">screenshot</a> of the accumulated rainfall (inches) in Maui Nui from March 9th to the 16th.
         </p>
 
-        <h3><b>🌊 March 13-14 Flood Extent 🌊</b></h3>
+        <h3 id="flood-extent-1"><b>🌊 Maui Nui: March 13-14 Flood Extent 🌊</b></h3>
 
         <iframe src="https://ee-anatarano.projects.earthengine.app/view/kona-low-1-flood-2026" style="width:100%; height:650px"></iframe>
         Credit: Arizona State University/NASA Acres Team using NASA SERVIR HYDRAFloods and ESA Sentinel-1 data, filtering streams from <a href="https://geoportal.hawaii.gov/datasets/HiStateGIS::nhd-waterbodies/about">Hawaii Statewide GIS program.</a>
