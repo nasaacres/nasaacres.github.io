@@ -39,3 +39,81 @@ td { padding: 0.5em 0.5em; }
 
 .schedule, .schedule th, .schedule td{ border: 1px solid lightgray; border-collapse: collapse;}
 .schedule th { font-size: 1.25em; }
+
+* { box-sizing: border-box; }
+
+.img-comp-container {
+  position: relative;
+  width: 100%;
+  max-width: 50em;
+  margin: 1rem 0;
+  line-height: 0;
+}
+
+.img-comp-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.img-comp-base {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-comp-overlay {
+  width: 50%;
+  height: 100%;
+}
+
+.img-comp-base img,
+.img-comp-overlay img {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: auto;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 20;
+  cursor: ew-resize;
+  width: 28px;
+  height: 28px;
+  background: #2196F3;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+
+.img-comp-label {
+  position: absolute;
+  top: 10px;
+  z-index: 30;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  pointer-events: none; 
+  backdrop-filter: blur(5px);
+}
+
+.img-comp-label-left {
+  left: 10px;
+}
+
+.img-comp-label-right {
+  right: 10px;
+}
+
+@media (max-width: 600px) {
+  .img-comp-label {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}

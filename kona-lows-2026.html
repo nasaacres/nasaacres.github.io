@@ -2,11 +2,116 @@
 <html lang="en">
   <head>
     <title>Satellite Data to Support Kona Low Response</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css">
     <link rel="icon" href="assets/acres-logo-color-small.png">
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="main.css">
+    <script>
+        function initComparisons() {
+        var overlays = document.getElementsByClassName("img-comp-overlay");
+
+        for (var i = 0; i < overlays.length; i++) {
+            setupComparison(overlays[i]);
+        }
+
+        function setupComparison(overlay) {
+            var container = overlay.parentElement;
+            var base = container.querySelector(".img-comp-base img");
+            var topImg = overlay.querySelector("img");
+            var slider = document.createElement("div");
+            var active = false;
+
+            slider.className = "img-comp-slider";
+            container.appendChild(slider);
+
+            function syncSizes() {
+            var w = base.offsetWidth;
+            var h = base.offsetHeight;
+
+            container.style.height = h + "px";
+
+            overlay.style.height = h + "px";
+            overlay.style.width = (w / 2) + "px";
+
+            // Critical: keep the overlay image the SAME size as the base image
+            topImg.style.width = w + "px";
+            topImg.style.height = h + "px";
+            topImg.style.maxWidth = "none";
+
+            slider.style.top = (h / 2 - slider.offsetHeight / 2) + "px";
+            slider.style.left = (w / 2 - slider.offsetWidth / 2) + "px";
+            }
+
+            function getX(e) {
+            var rect = container.getBoundingClientRect();
+            var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            var x = clientX - rect.left;
+            if (x < 0) x = 0;
+            if (x > rect.width) x = rect.width;
+            return x;
+            }
+
+            function moveSlider(x) {
+            overlay.style.width = x + "px";
+            slider.style.left = (x - slider.offsetWidth / 2) + "px";
+            }
+
+            function startDrag(e) {
+            e.preventDefault();
+            active = true;
+            window.addEventListener("mousemove", drag);
+            window.addEventListener("touchmove", drag, { passive: false });
+            }
+
+            function stopDrag() {
+            active = false;
+            window.removeEventListener("mousemove", drag);
+            window.removeEventListener("touchmove", drag);
+            }
+
+            function drag(e) {
+            if (!active) return;
+            e.preventDefault();
+            moveSlider(getX(e));
+            }
+
+            slider.addEventListener("mousedown", startDrag);
+            slider.addEventListener("touchstart", startDrag, { passive: false });
+            window.addEventListener("mouseup", stopDrag);
+            window.addEventListener("touchend", stopDrag);
+
+            container.addEventListener("click", function(e) {
+            moveSlider(getX(e));
+            });
+
+            function ready() {
+            syncSizes();
+            moveSlider(base.offsetWidth / 2);
+            }
+
+            if (base.complete && topImg.complete) {
+            ready();
+            } else {
+            var loaded = 0;
+            function onLoad() {
+                loaded++;
+                if (loaded >= 2) ready();
+            }
+            if (!base.complete) base.addEventListener("load", onLoad);
+            else loaded++;
+            if (!topImg.complete) topImg.addEventListener("load", onLoad);
+            else loaded++;
+            if (loaded >= 2) ready();
+            }
+
+            window.addEventListener("resize", ready);
+        }
+        }
+
+        window.addEventListener("load", initComparisons);
+    </script>
 </head>
 
   <body>
@@ -69,6 +174,8 @@
                 <div style="margin-left:36px;"><a href="#satellite-rainfall">🌧️ Rainfall</a></div>
                 <div style="margin-left:36px;"><a href="#flood-extent-1">🌊 Maui Nui: March 13-14 Flood Extent</a></div>
                 <div style="margin-left:36px;"><a href="#runoff-1">🪸 Maui Nui: Coastal Impacts</a></div>
+                <div style="margin-left:18px; margin-bottom:6px;"><a href="#kona-low-2-space">2️⃣ Kona Low II March 19-22, 2026</a></div>
+                <div style="margin-left:36px;"><a href="#runoff-2">🪸 Honolulu County: Coastal Impacts</a></div>
                 <div style="margin-top:8px;"><a href="#flood-hazard">⚠️ Flood Hazard Assessment Tool</a></div>
             </div>
         </details>
@@ -250,11 +357,43 @@
         🔍 To explore the map, zoom in and ↖️ click on a stream gauge. A panel will appear showing streamflow conditions and additional information for that area. Use the legend to toggle visibility of flood extent and streamflow categories.
         </p> 
 
-        <h3 id="runoff-1"><b>🪸 Maui Nui: Coastal Impacts 🪸</b></h3>
+        <h3 id="runoff-1"><b>🪸 Maui County: Coastal Impacts 🪸</b></h3>
          <figure>
             <img src="assets//kona_low_2026/runoff_Maalaeabay_03162026.png" style="width:100%">
             <figcaption>Satellite PlanetScope imagery of runoff present at Maalaea Bay on March 16th, 2026 at 11:36 AM (HST).</figcaption>
         </figure>
+
+
+        <h2 id="kona-low-2-space">2️⃣ Kona Low II March 19-22, 2026</h2>
+
+        <h3 id="runoff-2"><b>🪸 Honolulu County: Coastal Impacts 🪸</b></h3>
+         <!-- <figure>
+            <img src="assets//kona_low_2026/runoff_oahu_03222026.png" style="width:100%">
+            <figcaption>Satellite PlanetScope imagery of runoff present at Pokai Bay on March 22th, 2026 at 11:43 AM (HST).</figcaption>
+        </figure> -->
+
+        <!-- based on https://www.w3schools.com/howto/howto_js_image_comparison.asp -->
+        <div class="img-comp-container">
+            <div class="img-comp-img img-comp-base">
+                <img src="assets/kona_low_2026/runoff_oahu_03062026.png" alt="Before map">
+            </div>
+
+            <div class="img-comp-img img-comp-overlay">
+                <img src="assets/kona_low_2026/runoff_oahu_03222026.png" alt="After map">
+            </div>
+
+            <!-- Labels -->
+            <div class="img-comp-label img-comp-label-right">March 6</div>
+            <div class="img-comp-label img-comp-label-left">March 22</div>
+        </div>
+        
+        <p> 
+            ℹ️ This slider compares PlanetScope imagery before and after the storm to highlight coastal runoff. The left image shows conditions on March 22, 2026 at 11:43 AM (HST), while the right image shows conditions on March 6, 2026 at 11:38 AM (HST) at Pokai Bay. Discolored nearshore waters indicate sediment and freshwater entering the ocean from land.
+            <br>
+            The cyan overlay shows mapped <b>coral reef and hardbottom benthic habitats</b> from <a href="https://geoportal.hawaii.gov/search?groupIds=ab97e826ca9440d68ceb2d3f62603bfc">Hawaii Statewide GIS Program</a>.
+            <br>
+            🔍 Drag the slider (blue circle) to compare changes and identify impacted coastal areas.
+        </p>
         
         <h1 id="flood-hazard">⚠️ Flood Hazard Assessment Tool ⚠️</h1>
 
