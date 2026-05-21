@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Maui Nui Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css">
+    <link rel="icon" href="assets/acres-logo-color-small.png">
+    <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="main.css">
+            <style>
+          .issue-cells{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.6em;
+            margin-top: 0.5em;
+          }
+          .issue-cell{
+            display: block;
+            padding: 0.75em 0.9em;
+            border: 1px solid rgba(0,0,0,0.15);
+            border-radius: 0.75em;
+            text-decoration: none;
+            line-height: 1.2;
+          }
+          .issue-cell:hover{
+            border-color: rgba(0,0,0,0.35);
+            transform: translateY(-1px);
+          }
+          #newsletter-content,
+          #partners {
+            display: flow-root;
+          }
+        </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="navbar">
+        <a href="https://nasaacres.github.io/">
+            <div id="logo">
+                <img src="assets/acres-logo-color-full.png"/>
+                <div id="logotext">
+                <h1>NASA Acres</h1>
+                <h3>AI/Machine Learning</h3>
+                </div>
+            </div>
+        </a>
+      <div class="menu">
+        <a href="https://nasaacres.github.io/#about">About</a>
+        <a href="https://nasaacres.github.io/#projects">Projects</a>
+        <a href="https://nasaacres.github.io/mauinui">Maui Nui</a>
+        <a href="https://nasaacres.github.io/maui-wildfires">Maui Wildfires</a>
+        <a href="https://nasaacres.github.io/kona-lows-2026">Kona Lows 2026</a>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div id="content50">
+
+        <h1>Maui Nui Agriculture and Food Security Project</h1>
+        <a href="#overview">Overview</a>
+        &nbsp;|&nbsp;
+        <a href="#data">`Āina Data Stewards</a>
+        &nbsp;|&nbsp;
+        <a href="#newsletter">Maui Nui Crop Monitor Newsletter</a>
+        &nbsp;|&nbsp;
+        <a href="#partners">Partners</a>
+        &nbsp;|&nbsp;
+        <a href="https://docs.google.com/document/d/e/2PACX-1vQR4y8Db1Sm4KDG3jpkwCqw8LucZlRzzC3u-TAyGExEv_97AoajurkfqWNoIsyBzODlZ18Bn06w81R5/pub">
+            FAQ
+        </a>
+        <br>
+        <figure style="display: inline">
+            <img src="assets/taro.jpg"/>
+            <figcaption>Taro growing at Hawai'i Taro Farm</figcaption>
+        </figure>
+
+        <h1 id="overview">Overview</h1>
+        <p>
+            In March 2022, Maui United Way, the Maui ESG Project, and NASA Harvest submitted
+            a proposal for funding from NASA to address critical data gaps in Maui County
+            related to food insecurity and climate change by using satellite imagery and
+            machine learning to generate cropland and crop type maps.
+            <br><br>
+<!--             Through Earth Science Applications: Equity and Environmental Justice (EEJ) funding, NASA solicited proposals to advance progress on equity and environmental justice (EEJ) domestically through the application of Earth science, geospatial, and socioeconomic information.
+            <br><br> -->
+            Our project – <em>Closing Critical Data Gaps to Address Accelerating Impacts of Climate Change on Agriculture in
+            Highly Food Insecure Maui County</em> – was funded, with the following key project outcomes:
+            <ol>
+                <li>
+                    UH Maui College and Maui County high school students will collect field data on crops
+                    using smartphones at multiple agricultural sites throughout the County
+                    (with farmer permission).
+                </li>
+                <li>
+                    Field data, machine learning, and satellite Earth observations will be used to produce
+                    maps of where crops are growing and assess crop conditions across Maui County.
+                </li>
+                <li>
+                    With community guidance, crop maps will be integrated with other relevant
+                    datasets (e.g., socioeconomic and price data) to provide information on how best
+                    to support farmers and food security in the community.
+                </li>
+                <li>
+                    Farmers, advocates, and community members will provide guidance and feedback regarding
+                    data accuracy, availability, presentation of information, and usefulness to community
+                    stakeholders.
+                </li>
+                <li>
+                    Based on the initial collection and analysis, data collection will be planned and
+                    integrated with overall Maui County capacity building to guide additional studies such as
+                    soil quality, invasive species monitoring, and other addressable needs.
+                </li>
+            </ol>
+            <div style="background-color: aliceblue; padding: 1em;">
+                The primary goal of this project is to create more equitable access to food in
+                Maui County by helping to increase food production in a way that is both adaptive to
+                the changing climate and regenerative to the land.
+            </div>
+
+        </p>
+
+        <a href="https://docs.google.com/document/d/e/2PACX-1vQR4y8Db1Sm4KDG3jpkwCqw8LucZlRzzC3u-TAyGExEv_97AoajurkfqWNoIsyBzODlZ18Bn06w81R5/pub">
+            <h2>Detailed FAQ</h2>
+        </a>
+
+        <br>
+
+      <!-- <h2 id="streamflow">USGS Streamflow Maps</h2>
+
+<p>
+  Explore current streamflow conditions and recent summaries for Maui Nui.
+  Use the embedded maps below or open each one in a separate tab.
+</p>
+
+<div class="issue-cells">
+  <a class="issue-cell" href="assets/maui_nui_crop_monitor/usgs_kona_low_2026/current_realtime_average_map_03192026.html" target="_blank">
+    🌊 Current real-time streamflow map
+  </a>
+
+  <a class="issue-cell" href="assets/maui_nui_crop_monitor/usgs_kona_low_2026/current_7day_average_map_03192026.html" target="_blank">
+    📅 Previous 7 days streamflow map
+  </a>
+
+  <a class="issue-cell" href="assets/maui_nui_crop_monitor/usgs_kona_low_2026/current_28day_average_map_03192026.html" target="_blank">
+    🗓️ Previous 28 days streamflow map
+  </a>
+</div>
+
+<br>
+
+<h3>Current real-time conditions</h3>
+<iframe
+  src="assets/maui_nui_crop_monitor/usgs_kona_low_2026/current_realtime_average_map_03192026.html"
+  style="width:100%; height:650px; border:1px solid rgba(0,0,0,0.15); border-radius:12px; background:#fff;"
+  loading="lazy">
+</iframe>
+
+<h3>Previous 7 days</h3>
+<iframe
+  src="assets/maui_nui_crop_monitor/usgs_kona_low_2026/current_7day_average_map_03192026.html"
+  style="width:100%; height:650px; border:1px solid rgba(0,0,0,0.15); border-radius:12px; background:#fff;"
+  loading="lazy">
+</iframe>
+
+<h3>Previous 28 days</h3>
+<iframe
+  src="assets/maui_nui_crop_monitor/usgs_kona_low_2026/current_28day_average_map_03192026.html"
+  style="width:100%; height:650px; border:1px solid rgba(0,0,0,0.15); border-radius:12px; background:#fff;"
+  loading="lazy">
+</iframe> -->
+
+        <h1 id="data">`Āina Data Stewards</h1>
+
+        <h2>Training Schedule</h2>
+        <table class="schedule">
+            <tr>
+                <th class="schedule">Time</th>
+                <th class="schedule">Topic</th>
+                <th class="schedule">Lead</th>
+            </tr>
+            <tr>
+                <td class="schedule">9:00 - 10:00 am</td>
+                <td class="schedule">Introductions and icebreaker</td>
+                <td class="schedule"></td>
+            </tr>
+            <tr>
+                <td class="schedule">10:00 - 10:45 am</td>
+                <td class="schedule">Project overview/goals</td>
+                <td class="schedule">Hannah</td>
+            </tr>
+            <tr>
+                <td class="schedule">10:45 - 11:30 am</td>
+                <td class="schedule">NASA ACRES / Harvest</td>
+                <td class="schedule">Alyssa</td>
+            </tr>
+            <tr>
+                <td class="schedule">11:30 - 12:30 pm</td>
+                <td class="schedule">Lunch (BYO)</td>
+                <td class="schedule"></td>
+            </tr>
+            <tr>
+                <td class="schedule">12:45 - 1:15 pm</td>
+                <td class="schedule">From data to crop map</td>
+                <td class="schedule">Ivan & Gabriel</td>
+            </tr>
+            <tr>
+                <td class="schedule">1:15 - 1:45 pm</td>
+                <td class="schedule">Collecting data</td>
+                <td class="schedule">Hannah</td>
+            </tr>
+            <tr>
+                <td class="schedule">1:45 - 2:00 pm</td>
+                <td class="schedule">Demo app in groups + student practice outside</td>
+                <td class="schedule"></td>
+            </tr>
+        </table>
+
+        <h2>Data Collection App</h2>
+        <img src="assets/aina-data4.png" style="margin: 0"/>
+
+
+        <h2>Data Collection Cheatsheet</h2>
+        <img src="assets/field-data-cheat sheet.png" style="margin: 0"/>
+
+
+        <h1 id="newsletter">Maui Nui: Crop Monitor</h1>
+
+        <p class="subtitle">Quarterly Newsletter</p>
+
+        <p>
+          The <strong>Maui Nui: Crop Monitor</strong> shares crop growing conditions and agrometeorological insights to strengthen food security decision-making across
+          Maui County. Content includes crop health, rainfall, streamflow, kaulana mahina,
+          community tips, and opportunities from <a href = "https://www.mauicounty.gov/2473/Department-of-Agriculture" >Maui County's Department of Agriculture</a>.
+        </p>
+
+        <div id="newsletter-content">
+          <div class="column">
+            <h3>Subscribe</h3>
+            <p>Scan the QR code or use the link below to receive future issues.</p>
+            <img
+              src="assets/crop-monitor-subscribe-qr.png"
+              alt="Subscribe to Maui Nui Crop Monitor"
+              style="max-width: 180px;"
+            />
+            <p>
+              <a href="https://github.us13.list-manage.com/subscribe?u=de2a137d36d49d49f7925fcf0&id=cab3fc37cf" target="_blank">
+                Subscribe to the Crop Monitor
+              </a>
+            </p>
+          </div>
+
+          <div class="column">
+            <h3>Previous Issues</h3>
+
+            <div class="issue-cells">
+              <a class="issue-cell" href="assets/maui_nui_crop_monitor/june_issue.html">
+                💧 Drought Issue (Part 1)
+              </a>
+
+              <a class="issue-cell" href="assets/maui_nui_crop_monitor/march_issue.html">
+                🦌 Deer Issue!
+              </a>
+
+              <a class="issue-cell" href="assets/maui_nui_crop_monitor/feb_issue.html">
+                🌧️ January Storm Impacts Issue
+              </a>
+
+              <a class="issue-cell" href="assets/maui_nui_crop_monitor/dec_issue.html">
+                🌧️ Welehu Rainfall Issue
+              </a>
+
+              <a class="issue-cell" href="assets/maui_nui_crop_monitor/nov_issue.html">
+                🌱 Soil Moisture Issue
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <iframe
+          src="https://ee-anatarano.projects.earthengine.app/view/vcimauinui"
+          style="width:750px; height:600px; border:0; display:block; margin: 1em 0;"
+          loading="lazy"
+        ></iframe>
+
+        <div style="clear: both;"></div>
+
+        <h1 id="partners">Partners</h1>
+        <div id="partners">
+            <div class="column">
+                <img
+                    src="assets/Harvest_Header_Color_Horizontal_Text.png"
+                    style="max-height: 5em;"/>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Arizona_State_University_logo.svg/1200px-Arizona_State_University_logo.svg.png"
+                    style="max-height: 3em;"/>
+
+            </div>
+            <div class="column">
+                <img src="assets/umd-logo.png" style="max-height: 4.5em;"/>
+                <img src="https://mauiunitedway.org/images/logo.png" style="max-height: 3.5em;"/>
+                <img
+                    src="assets/responsible-markets-logo.png"
+                    style="max-height: 9em; "/>
+            </div>
+            <div class="column">
+                <img src="https://maui.hawaii.edu/wp-content/uploads/2021/03/UHMC-BLOCK-LOGO.png" style="max-height: 3.5em;"/>
+                <img src="assets/acres-logo.png" style="max-height: 7.0em;"/>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
